@@ -1,0 +1,11 @@
+{
+  "product": "mn-cannabis-openings",
+  "site": "https://mn-cannabis-openings.vercel.app",
+  "price_usd": 5,
+  "launch": 1792195200,
+  "name": "Twin Cities Cannabis Openings: the full list",
+  "short": "Cannabis Openings",
+  "thing": "full list",
+  "description": "Every Twin Cities cannabis business on the state license list or building out in Minneapolis, with each site contact's name and email.",
+  "line": "The full list, with every site contact's name and email, sorted closest-to-opening first, plus the spreadsheet, is $5, once."
+}

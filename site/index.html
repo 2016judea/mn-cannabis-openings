@@ -1,0 +1,300 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Twin Cities Cannabis Openings</title><meta name="description" content="211 Twin Cities cannabis businesses newly licensed or about to open, from the state license list and Minneapolis build-out permits.">
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script>
+<!-- bm-posthog:begin v2 — shared across every Vercel prototype; source ~/.claude/skills/site-analytics/posthog_snippet.html. ?me=1 opts this browser out on this site (?me=0 undoes); ?me=1&next=host1,host2 walks the opt-out across sites; headless (navigator.webdriver) never loads it. -->
+<script>
+(function(w,d){var S="mn-cannabis-openings",K="bm_me",me=false,u,p,n;
+try{u=new URLSearchParams(location.search);p=u.get("me");n=u.get("next");}catch(e){}
+try{if(p==="1"){localStorage.setItem(K,"1");}else if(p==="0"){localStorage.removeItem(K);}}catch(e){}
+if(p==="1"){d.cookie=K+"=1; path=/; max-age=63072000; SameSite=Lax";}else if(p==="0"){d.cookie=K+"=; path=/; max-age=0; SameSite=Lax";}
+try{me=localStorage.getItem(K)==="1";}catch(e){}
+if(!me&&/(?:^|; )bm_me=1/.test(d.cookie))me=true;
+if(p==="1"&&n){var h=n.split(","),f=h.shift();if(/^[a-z0-9.-]+$/.test(f)&&(f.slice(-11)===".vercel.app"||f==="brickandmortar.dev"||f==="readglean.com")){location.replace("https://"+f+"/?me=1"+(h.length?"&next="+h.join(","):""));}}
+if(navigator.webdriver===true)return;
+!function(t,e){var o,n,p,r;e.__SV||(w.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once unregister identify setPersonProperties reset get_distinct_id get_session_id alias set_config startSessionRecording stopSessionRecording opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing captureException getFeatureFlag isFeatureEnabled onFeatureFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(d,w.posthog||[]);
+posthog.init("phc_yFgRGppL6H7DvhgZTQKbHdrY5oqnpLT482rrNYtLqnAx",{api_host:"https://us.i.posthog.com",person_profiles:"identified_only",persistence:"localStorage+cookie",opt_out_capturing_by_default:me});
+if(me){posthog.opt_out_capturing();}else{if(p==="0")posthog.opt_in_capturing();posthog.register({site:S});}
+})(window,document);
+</script>
+<!-- bm-posthog:end -->
+<script>/* bm-visitor-id — who read this page, on how many days, and what they touched.
+   Source of truth: bricks/scripts/outreach/reader_events.js (inlined by visitor_id.py
+   into every /for/ page; pasted verbatim into buying-window, pt-rates, salon-rates).
+
+   PostHog keeps an anonymous distinct_id in localStorage + cookie, so a return
+   visit on another day is the same reader (Vercel's hash rotates daily). Every
+   event also goes to Vercel custom events (va.track) so the dashboard shows it.
+
+   Events: $pageview (auto), download, sort, filter, row_click, row_expand,
+   link_click, scroll_depth (25/50/75/100), time_on_page (seconds visible). */
+(function () {
+  var KEY = 'phc_yFgRGppL6H7DvhgZTQKbHdrY5oqnpLT482rrNYtLqnAx';
+  var q = [], ready = false;
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  function cut(v) { return String(v == null ? '' : v).replace(/\s+/g, ' ').trim().slice(0, 120); }
+  function send(name, props, beacon) {
+    props = props || {};
+    try { window.va('event', { name: name, data: props }); } catch (e) {}
+    if (ready) { try { posthog.capture(name, props, beacon ? { transport: 'sendBeacon' } : undefined); } catch (e) {} }
+    else q.push([name, props]);
+  }
+  /* Opt-out + headless guard (2026-10-12), the same rules as the shared bm-posthog block
+     (scripts/posthog_block.html): ?me=1 opts this browser out for good, ?me=0 undoes it,
+     navigator.webdriver never loads PostHog. Defer to that block when the page carries it. */
+  var me = false, mp = null;
+  try { mp = new URLSearchParams(location.search).get('me'); } catch (e) {}
+  try { if (mp === '1') localStorage.setItem('bm_me', '1'); else if (mp === '0') localStorage.removeItem('bm_me'); } catch (e) {}
+  if (mp === '1') document.cookie = 'bm_me=1; path=/; max-age=63072000; SameSite=Lax';
+  else if (mp === '0') document.cookie = 'bm_me=; path=/; max-age=0; SameSite=Lax';
+  try { me = localStorage.getItem('bm_me') === '1'; } catch (e) {}
+  if (!me && /(?:^|; )bm_me=1/.test(document.cookie)) me = true;
+  function go() {
+    posthog.register({ path: location.pathname });
+    ready = true;
+    while (q.length) { var e = q.shift(); posthog.capture(e[0], e[1]); }
+  }
+  if (window.posthog && window.posthog.__SV) {
+    go();
+  } else if (navigator.webdriver !== true) {
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://us-assets.i.posthog.com/static/array.js';
+    s.onload = function () {
+      posthog.init(KEY, { api_host: 'https://us.i.posthog.com', person_profiles: 'identified_only',
+                          persistence: 'localStorage+cookie', opt_out_capturing_by_default: me });
+      if (me) { posthog.opt_out_capturing(); return; }
+      if (mp === '0') posthog.opt_in_capturing();
+      posthog.register({ site: 'bricks' });
+      go();
+    };
+    document.head.appendChild(s);
+  }
+
+  function label(el) {
+    return cut(el.getAttribute('aria-label') || el.name || el.id || el.getAttribute('placeholder') || 'control');
+  }
+  function rowText(el) {
+    var k = el.querySelector('.a, .name, td, summary, b, strong');
+    return cut((k || el).textContent);
+  }
+
+  document.addEventListener('click', function (ev) {
+    var t = ev.target;
+    if (!t || !t.closest) return;
+    var a = t.closest('a[href]');
+    if (a) {
+      var h = a.getAttribute('href') || '';
+      if (a.hasAttribute('download') || /\.csv(\?|$)|\/api\/export/.test(h)) {
+        send('download', { file: cut(a.getAttribute('download') || h.split('?')[0].split('/').pop() || a.textContent), href: cut(h) });
+      } else {
+        send('link_click', { href: cut(a.href), text: cut(a.textContent) });
+      }
+      return;
+    }
+    var th = t.closest('th');
+    if (th) { send('sort', { column: cut(th.textContent) }); return; }
+    var opt = t.closest('[role=option]');
+    if (opt) { send('row_click', { row: cut((opt.firstElementChild || opt).textContent) }); return; }
+    var chip = t.closest('.chip, [aria-pressed], [role=tab]');
+    if (chip) {
+      var grp = chip.parentElement;
+      send('filter', { column: cut((grp && (grp.getAttribute('aria-label') || grp.id)) || 'chips'), value: cut(chip.textContent) });
+      return;
+    }
+    var pick = t.closest('button[data-id], button[data-slug], [data-row]');
+    if (pick) { send('row_click', { row: cut(pick.textContent) }); return; }
+    if (t.closest('summary')) return; /* counted by the toggle listener */
+    var row = t.closest('tbody tr, ol > li, ul > li, tr[class]');
+    if (row && !t.closest('nav, header, footer')) { send('row_click', { row: rowText(row) }); return; }
+    var b = t.closest('button');
+    if (b) send('button', { id: cut(b.id || b.textContent) });
+  }, true);
+
+  document.addEventListener('change', function (ev) {
+    var el = ev.target;
+    if (!el || el.tagName !== 'SELECT') return;
+    var v = el.options[el.selectedIndex] ? el.options[el.selectedIndex].text : el.value;
+    send(/sort|order/i.test(el.id + ' ' + el.name) ? 'sort' : 'filter', { column: label(el), value: cut(v) });
+  }, true);
+
+  var typing = {};
+  document.addEventListener('input', function (ev) {
+    var el = ev.target;
+    if (!el || el.tagName !== 'INPUT' || !/^(search|text)$/.test(el.type)) return;
+    var k = label(el);
+    clearTimeout(typing[k]);
+    typing[k] = setTimeout(function () { if (el.value.trim()) send('filter', { column: k, value: cut(el.value) }); }, 900);
+  }, true);
+
+  document.addEventListener('toggle', function (ev) {
+    var d = ev.target;
+    if (d && d.tagName === 'DETAILS' && d.open) {
+      var sm = d.querySelector('summary');
+      send('row_expand', { row: cut(sm ? sm.textContent : d.textContent) });
+    }
+  }, true);
+
+  var marks = [25, 50, 75, 100], hit = 0;
+  function depth() {
+    var de = document.documentElement;
+    var seen = (window.scrollY + window.innerHeight) / Math.max(de.scrollHeight, 1) * 100;
+    while (marks.length && seen >= marks[0] - 1) { hit = marks.shift(); send('scroll_depth', { depth: hit }); }
+  }
+  window.addEventListener('scroll', depth, { passive: true });
+  window.addEventListener('load', depth);
+
+  var shown = 0, since = document.visibilityState === 'visible' ? Date.now() : 0;
+  function flush() {
+    if (since) { shown += Date.now() - since; since = 0; }
+    if (shown >= 1000) send('time_on_page', { seconds: Math.round(shown / 1000), max_depth: hit }, true);
+    shown = 0;
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (document.visibilityState === 'hidden') flush(); else since = Date.now();
+  });
+  window.addEventListener('pagehide', flush);
+})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@700&family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#f3f4f1;--panel:#e7e9e3;--ink:#141a17;--ink2:#333c37;--muted:#626c66;--rule:#d0d5cd;--accent:#1d6b4f;--onaccent:#f3f4f1;--hot:#c0392b;--grow:#7a6a1f;--move:#2c4f8a;--done:#8d958f;--ghost:#c3c9c1;--water:#8fb0bf;--tagbg:#e1e5de;--tagfg:#45504a;--hotbg:#f3d8d3;--hotfg:#8e2418;--display:"Archivo Narrow","Arial Narrow",sans-serif;--body:"Archivo",system-ui,sans-serif;--h1w:700; --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1311;--panel:#171d1a;--ink:#e5ebe7;--ink2:#c0c9c4;--muted:#8a948e;--rule:#27302b;--accent:#5fc49b;--onaccent:#0f1311;--hot:#f07a6a;--grow:#d1bb5c;--move:#86a8e6;--done:#68716c;--ghost:#2a332e;--water:#3d6176;--tagbg:#1f2723;--tagfg:#adb8b2;--hotbg:#45201a;--hotfg:#f7b0a6; color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1311;--panel:#171d1a;--ink:#e5ebe7;--ink2:#c0c9c4;--muted:#8a948e;--rule:#27302b;--accent:#5fc49b;--onaccent:#0f1311;--hot:#f07a6a;--grow:#d1bb5c;--move:#86a8e6;--done:#68716c;--ghost:#2a332e;--water:#3d6176;--tagbg:#1f2723;--tagfg:#adb8b2;--hotbg:#45201a;--hotfg:#f7b0a6; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 var(--body);margin:0;--pw-bg:var(--bg);--pw-ink:var(--ink);--pw-soft:var(--muted);--pw-line:var(--rule);--pw-card:var(--panel);--pw-accent:var(--accent)}
+.wrap{max-width:980px;margin:0 auto;padding-inline:16px;padding-block:28px 64px}
+.eyebrow{font:500 11px/1.4 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+h1{font:var(--h1w) clamp(30px,6vw,50px)/1.05 var(--display);margin:10px 0 12px;text-wrap:balance;letter-spacing:-.01em;max-width:20ch}
+.lede{font-size:18px;max-width:60ch;margin:0;color:var(--ink2)}
+.lede b{color:var(--ink);font-weight:600}
+.stats{display:flex;flex-wrap:wrap;gap:10px 28px;margin:22px 0 6px;font-variant-numeric:tabular-nums}
+.stat b{display:block;font:600 26px/1.1 var(--display);color:var(--accent)}
+.stat span{font-size:13px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:24px}
+@media(min-width:860px){.grid{grid-template-columns:340px 1fr;align-items:start}.mapbox{position:sticky;top:12px}}
+@media(max-width:859px){.mapbox{order:2}}
+.mapbox{background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:12px}
+.mapbox svg{display:block;width:100%;height:auto;max-height:70vh}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--muted);margin-top:8px}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.controls{display:flex;flex-direction:column;gap:10px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font:500 14px/1 var(--body);border:1px solid var(--rule);background:var(--bg);color:var(--ink2);padding:11px 12px;border-radius:999px;cursor:pointer;min-height:44px}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--onaccent)}
+.chip:focus-visible,button:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.row2{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between}
+select,.btn{font:500 16px var(--body);color:var(--ink);background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;min-height:44px}
+select{-webkit-appearance:none;appearance:none;padding-right:30px;background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 16px) 50%,calc(100% - 11px) 50%;background-size:5px 5px;background-repeat:no-repeat;max-width:100%}
+.btn{cursor:pointer;text-decoration:none;display:inline-block}
+.count{font:12px var(--mono);color:var(--muted)}
+ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+li.r{padding:14px 2px;border-top:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:2px 12px}
+li .a{font-weight:600;font-size:16px}
+li .m{grid-column:1/-1;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px;font-variant-numeric:tabular-nums}
+li .w{grid-column:1/-1;font-size:14px;color:var(--ink2);margin:2px 0}
+li .k{grid-column:1/-1;font-size:14px;color:var(--ink);display:flex;flex-wrap:wrap;gap:4px 14px}
+li .k a{color:var(--accent);font-weight:600;text-decoration:none}
+.tag{font:500 11px/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:5px 7px;border-radius:4px;white-space:nowrap;align-self:start;background:var(--tagbg);color:var(--tagfg)}
+.tag.hot{background:var(--hotbg);color:var(--hotfg)}
+.more{margin:14px 0 0}
+.note{font-size:13px;color:var(--muted);max-width:65ch;margin-top:36px;border-top:1px solid var(--rule);padding-top:14px}
+.note p{margin:0 0 8px}
+.free{font-size:13px;color:var(--muted);margin:10px 0 0}
+</style></head><body>
+<div class="wrap">
+  <div class="eyebrow">For security, transport and service firms · Minnesota public records · updated Oct 17, 2026</div>
+  <h1>211 Twin Cities cannabis businesses licensed or about to open</h1>
+  <p class="lede">Every dispensary needs guards at the door and every grow needs product moved. These are the seven-county metro's licensed cannabis businesses, plus the Minneapolis dispensaries and grows building out right now. <b>19 are at or near final inspection</b>, 41 got their state license in the last 90 days, and the state lists a named contact and email for 183.</p>
+  <div class="stats" id="stats"></div>
+  <div class="grid">
+    <div class="mapbox"><svg id="map" viewBox="0 0 300 400" role="img" aria-label="Map of the Twin Cities with each cannabis business as a dot"></svg><div class="legend" id="legend"></div></div>
+    <div>
+      <div class="controls">
+        <div class="chips" id="chips"></div>
+        <div class="row2"><label class="count" for="sort">Sort <select id="sort"></select></label>
+          <button class="btn" id="csv" type="button">Download spreadsheet</button></div>
+        <div class="count" id="count"></div>
+      </div>
+      <ol id="list"></ol>
+      <div id="lock"></div>
+      <button class="btn more" id="more" type="button" hidden>Show more</button>
+      <div id="pay"></div>
+    </div>
+  </div>
+  <div class="note"><p>Sources, all public: the Minnesota Office of Cannabis Management's licensed-business list (published Oct 12, 2026), and the City of Minneapolis building permit register (pulled Oct 17, 2026).</p><p>How the stage is read. Opening soon: a Minneapolis permit for a dispensary or grow is under construction or at final inspection. Newly licensed: the state license was issued in the last 90 days. Built out, not on the state list: a finished Minneapolis cannabis permit at an address the state list doesn't carry yet. Only Minneapolis publishes its permits, so suburban and Saint Paul rows carry the state license alone. Businesses with no site address on the state list sit at the middle of their city on the map.</p><p>Hemp-edible (LPHE) retailers are left out. From Aidan Jude at Brick &amp; Mortar (aidan@brickandmortar.dev).</p></div>
+</div>
+<script src="/paywall.js"></script>
+<script>
+const CFG={chipKey:"kind",chipOrder:["Dispensary", "Grow or manufacturing", "Transport, wholesale, delivery", "Testing or events"],csv:"twin-cities-cannabis-openings.csv",cols:[["stage", "Stage"], ["name", "Business (D.B.A.)"], ["legal", "Legal name"], ["kind", "Kind"], ["btype", "State business type"], ["addr", "Site address"], ["city", "City"], ["county", "County"], ["contact", "Site contact"], ["email", "Email"], ["issued", "State license issued"], ["expires", "License expires"], ["license", "License #"], ["ltype", "License type"], ["pstage", "Minneapolis permit stage"], ["pdate", "Permit date"], ["pwhat", "Permit description"], ["by", "Builder on the permit"], ["permit", "Permit #"]],
+ stats:[["19","opening soon: a Minneapolis build-out at or near final inspection"],["41","newly licensed by the state in the last 90 days"],["183","with a named site contact and email"]],
+ legend:[["var(--hot)","Opening soon"],["var(--accent)","Newly licensed"],["var(--done)","Licensed earlier"]],
+ dotColor:["var(--accent)","var(--grow)","var(--move)","var(--done)"],
+ labels:[[45.005,-93.33,"Minneapolis"],[44.915,-93.04,"Saint Paul"]],
+ color:r=>r.stage==="Opening soon"?"var(--hot)":r.stage==="Newly licensed"?"var(--accent)":"var(--done)",
+ title:r=>r.title, what:r=>r.pwhat?("Permit: "+r.pwhat):(r.btype||r.kind),
+ tag:r=>`<span class="tag ${r.so===0?"hot":""}">${r.stage}</span>`,
+ meta:r=>[r.place,r.city,r.issued?("State license "+fmt(r.issued)):"",r.pstage?(r.pstage+" "+fmt(r.pdate)):""],
+ paid:r=>[r.contact?`Contact: ${esc(r.contact)}`:"",r.email?r.email.split(/[;,\s]+/).filter(Boolean).map(e=>`<a href="mailto:${esc(e)}">${esc(e)}</a>`).join(" "):"",r.legal&&r.legal!==r.name?`Entity: ${esc(r.legal)}`:"",r.by?`Builder: ${esc(r.by)}`:""].filter(Boolean).join(" · "),
+ sorts:[["newest","Newest first",false],["open","Closest to opening",true],["city","By city",true]],
+ sortFn:{newest:r=>r.sort((a,b)=>b.latest.localeCompare(a.latest)),open:r=>r.sort((a,b)=>(a.so-b.so)||b.latest.localeCompare(a.latest)),city:r=>r.sort((a,b)=>a.city.localeCompare(b.city)||a.so-b.so)},
+ lockText:n=>`${n} more businesses, every site contact's name and email, and the closest-to-opening sort`};
+const FREE={"rows":[{"name":"","kind":"Dispensary","btype":"","ltype":"","addr":"1101 Hennepin Ave","city":"Minneapolis","county":"Hennepin","issued":"","expires":"","equity":false,"medical":false,"permit":"BLDG1194821","pstage":"Under construction","pdate":"2026-10-06","pwhat":"New Cannabis Retail - DHI Company","lat":44.97491,"lon":-93.27912,"stage":"Opening soon","latest":"2026-10-06","so":0,"title":"1101 Hennepin Ave","place":""},{"name":"DISPO","kind":"Dispensary","btype":"Retail","ltype":"Retail","addr":"4423 Nicollet Avenue, Minneapolis, MN 55419","city":"Minneapolis","county":"Hennepin","issued":"2026-10-02","expires":"2027-10-02","equity":false,"medical":false,"permit":"BLDG1181973","pstage":"Final inspection","pdate":"2026-06-26","pwhat":"OCM - CANNABIS DISPENSARY","lat":44.92251,"lon":-93.27754,"stage":"Opening soon","latest":"2026-10-02","so":0,"title":"DISPO","place":"4423 Nicollet Avenue"},{"name":"","kind":"Dispensary","btype":"","ltype":"","addr":"3820 46th St E","city":"Minneapolis","county":"Hennepin","issued":"","expires":"","equity":false,"medical":false,"permit":"BLDG1193680","pstage":"Under construction","pdate":"2026-10-02","pwhat":"CANNABIS DISPENSARY. CHANGE OF OCCUPANCY","lat":44.92033,"lon":-93.2173,"stage":"Opening soon","latest":"2026-10-02","so":0,"title":"3820 46th St E","place":""},{"name":"Tonka Dispensary","kind":"Dispensary","btype":"Retail","ltype":"Microbusiness","addr":"15602 Highway 7, Minnetonka, MN 55345","city":"Minnetonka","county":"Hennepin","issued":"2026-10-07","expires":"2027-10-07","equity":false,"medical":false,"permit":"","pstage":"","pdate":"","pwhat":"","lat":44.92045,"lon":-93.47828,"stage":"Newly licensed","latest":"2026-10-07","so":1,"title":"Tonka Dispensary","place":"15602 Highway 7"},{"name":"Marvin's Garden Minneapolis","kind":"Dispensary","btype":"Retail","ltype":"Microbusiness","addr":"726 Central Avenue NE, Suite #111, Minneapolis, MN 55414","city":"Minneapolis","county":"Hennepin","issued":"2026-10-05","expires":"2027-10-05","equity":false,"medical":false,"permit":"BLDG1169539","pstage":"Finished","pdate":"2026-07-06","pwhat":"remodel retail cannabis sales","lat":44.99137,"lon":-93.25064,"stage":"Newly licensed","latest":"2026-10-05","so":1,"title":"Marvin's Garden Minneapolis","place":"726 Central Avenue NE"},{"name":"LIV CANNABIS LLC","kind":"Dispensary","btype":"Retail","ltype":"Microbusiness","addr":"1960 Cliff Lake Road, Unit# 123 Eagan, MN 55122","city":"Eagan","county":"Dakota","issued":"2026-10-02","expires":"2027-10-02","equity":false,"medical":false,"permit":"","pstage":"","pdate":"","pwhat":"","lat":44.79422,"lon":-93.20626,"stage":"Newly licensed","latest":"2026-10-02","so":1,"title":"LIV CANNABIS LLC","place":"1960 Cliff Lake Road"},{"name":"Exotics LLC","kind":"Grow or manufacturing","btype":"Cultivation","ltype":"Microbusiness","addr":"","city":"Saint Paul","county":"Ramsey","issued":"2026-09-18","expires":"2027-09-18","equity":true,"medical":false,"permit":"","pstage":"","pdate":"","pwhat":"","lat":44.94551,"lon":-93.12995,"approx":true,"stage":"Newly licensed","latest":"2026-09-18","so":1,"title":"Exotics LLC","place":""},{"name":"Pot on the Spot Delivery","kind":"Transport, wholesale, delivery","btype":"Delivery Service","ltype":"Delivery Service","addr":"","city":"Minneapolis","county":"Hennepin","issued":"2026-08-17","expires":"2027-08-17","equity":false,"medical":false,"permit":"","pstage":"","pdate":"","pwhat":"","lat":44.95821,"lon":-93.26525,"approx":true,"stage":"Newly licensed","latest":"2026-08-17","so":1,"title":"Pot on the Spot Delivery","place":""},{"name":"Fresh Fields","kind":"Transport, wholesale, delivery","btype":"Wholesaler","ltype":"Wholesaler","addr":"","city":"Minnetonka","county":"Hennepin","issued":"2026-07-07","expires":"2027-07-07","equity":false,"medical":false,"permit":"","pstage":"","pdate":"","pwhat":"","lat":44.92045,"lon":-93.47828,"approx":true,"stage":"Licensed","latest":"2026-07-07","so":3,"title":"Fresh Fields","place":""},{"name":"Dank Session Delivery LLC","kind":"Transport, wholesale, delivery","btype":"Delivery Service","ltype":"Delivery Service","addr":"","city":"Bloomington","county":"Hennepin","issued":"2026-06-29","expires":"2027-06-29","equity":true,"medical":false,"permit":"","pstage":"","pdate":"","pwhat":"","lat":44.8355,"lon":-93.30164,"approx":true,"stage":"Licensed","latest":"2026-06-29","so":3,"title":"Dank Session Delivery LLC","place":""}],"counts":{"Dispensary":150,"Grow or manufacturing":32,"Transport, wholesale, delivery":22,"Testing or events":7},"total":211,"dots":[[44.92,-93.478,0],[44.991,-93.251,0],[44.923,-93.278,0],[44.794,-93.206,0],[45.016,-93.218,0],[44.95,-93.087,0],[44.851,-93.789,0],[45.022,-93.381,0],[44.667,-93.639,0],[44.946,-93.13,1],[44.935,-93.625,0],[44.744,-92.85,0],[45.023,-92.981,0],[44.836,-93.302,1],[45.116,-93.264,1],[45.2,-93.556,0],[45.036,-92.817,0],[44.68,-93.258,1],[44.946,-93.13,1],[45.218,-93.422,1],[44.769,-93.916,0],[45.018,-92.78,0],[44.958,-93.265,3],[44.958,-93.265,2],[44.836,-93.302,1],[44.82,-93.307,0],[44.909,-93.207,0],[44.942,-92.93,0],[44.958,-93.265,1],[45.057,-93.198,0],[44.645,-93.234,0],[44.951,-93.088,0],[45.162,-93.242,2],[44.859,-93.223,0],[44.934,-93.278,0],[45.059,-93.263,0],[44.544,-93.583,0],[45.034,-93.018,0],[44.948,-93.299,0],[44.928,-93.224,0],[44.92,-93.478,2],[44.992,-93.025,0],[44.836,-93.302,2],[44.85,-93.595,0],[44.927,-93.129,0],[44.958,-93.265,2],[44.946,-93.13,3],[44.743,-93.293,0],[44.79,-93.21,0],[44.938,-93.351,0],[44.935,-93.612,0],[44.81,-93.33,0],[44.989,-93.253,0],[45.273,-92.984,0],[45.165,-93.025,0],[45.107,-93.197,0],[44.95,-93.02,0],[44.99,-93.254,0],[44.904,-93.747,0],[45.218,-93.422,2],[44.958,-93.265,3],[45.125,-93.264,0],[45.107,-93.264,0],[45.162,-93.242,2],[45.162,-93.242,2],[44.968,-93.209,0],[44.958,-93.265,2],[44.958,-93.265,2],[44.94,-93.156,0],[45.124,-93.234,0],[44.934,-93.162,0],[44.946,-93.126,0],[44.666,-93.632,3],[44.949,-93.298,0],[44.869,-93.288,0],[45.05,-93.053,0],[44.984,-93.378,0],[44.816,-92.929,0],[45.197,-93.337,0],[44.916,-93.262,0],[45.04,-92.821,0],[45.035,-93.191,3],[44.895,-93.269,0],[44.946,-93.13,1],[44.924,-93.406,0],[45.095,-93.378,0],[44.956,-93.119,0],[44.946,-93.13,1],[44.981,-93.236,0],[44.956,-93.168,0],[45.026,-93.103,0],[45.055,-93.635,0],[44.834,-93.18,0],[44.836,-93.302,2],[44.921,-93.329,0],[44.912,-93.291,0],[45.174,-93.39,0],[44.923,-93.167,0],[45.218,-93.422,0],[44.937,-93.291,0],[44.938,-93.351,2],[45.04,-92.821,1],[44.956,-93.166,0],[44.864,-93.354,0],[45.187,-93.376,0],[44.927,-93.138,0],[44.851,-93.789,1],[44.881,-93.15,0],[44.951,-93.298,0],[44.68,-93.258,0],[45.05,-93.034,0],[45.165,-93.025,1],[44.623,-93.768,0],[45.124,-93.147,0],[44.952,-93.288,0],[44.949,-93.288,0],[44.912,-93.309,0],[44.938,-93.351,2],[44.743,-93.293,2],[44.946,-93.13,2],[44.946,-93.13,2],[44.743,-93.293,2],[44.743,-93.293,2],[44.947,-93.167,0],[45.014,-93.247,0],[44.664,-93.626,0],[44.797,-93.602,0],[44.876,-93.329,0],[44.709,-93.429,0],[44.932,-93.421,0],[45.173,-93.39,0],[45.104,-93.456,0],[44.946,-92.907,0],[44.946,-92.771,0],[44.985,-93.27,0],[45.035,-93.191,0],[44.959,-93.191,0],[44.987,-93.255,0],[45.197,-93.23,0],[44.785,-93.6,0],[44.724,-92.851,0],[44.883,-93.309,0],[44.958,-93.265,3],[44.717,-93.218,0],[45.226,-93.357,0],[44.816,-92.929,1],[44.831,-93.164,0],[44.918,-93.195,0],[45.033,-93.378,0],[45.095,-93.378,0],[44.743,-93.293,0],[44.974,-93.271,0],[44.852,-93.347,0],[45.126,-93.253,0],[44.938,-92.954,0],[44.747,-93.331,0],[44.927,-93.166,0],[44.946,-93.13,3],[44.961,-93.069,0],[44.99,-93.28,0],[45.162,-93.242,0],[44.714,-93.282,0],[45.051,-93.218,0],[44.98,-93.266,0],[45.116,-93.264,0],[44.955,-93.277,0],[44.982,-93.271,1],[44.954,-93.298,0],[44.996,-93.222,1],[44.975,-93.279,0],[44.935,-93.224,0],[44.955,-93.277,0],[44.994,-93.247,0],[44.931,-93.222,0],[45.0,-93.288,0],[44.949,-93.215,0],[44.934,-93.262,0],[44.988,-93.254,0],[44.949,-93.292,0],[44.992,-93.239,0],[44.991,-93.293,1],[44.981,-93.236,0],[44.983,-93.284,1],[45.009,-93.237,0],[44.961,-93.294,0],[44.894,-93.309,0],[44.951,-93.289,0],[44.894,-93.279,0],[44.949,-93.289,0],[44.92,-93.217,0],[44.927,-93.248,0],[44.994,-93.247,1],[44.977,-93.3,1]]};
+const $=id=>document.getElementById(id);
+let ROWS=FREE.rows,FULL=false,sel=null,shown=40;
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt=d=>d?new Date(d.slice(0,10)+"T12:00:00").toLocaleDateString("en-US",{month:"short",day:"numeric",year:"numeric"}):"";
+$("stats").innerHTML=CFG.stats.map(s=>`<div class="stat"><b>${s[0]}</b><span>${s[1]}</span></div>`).join("");
+$("legend").innerHTML=CFG.legend.map(([c,l])=>`<span><i style="background:${c}"></i>${esc(l)}</span>`).join("");
+// chips count the WHOLE list (FREE.counts), not just the sample
+function chips(){const C=FULL?Object.fromEntries(CFG.chipOrder.map(g=>[g,ROWS.filter(r=>r[CFG.chipKey]===g).length])):FREE.counts;
+  $("chips").innerHTML=[["All",FREE.total],...CFG.chipOrder.filter(g=>C[g]).map(g=>[g,C[g]])].map(([g,n])=>`<button class="chip" type="button" data-g="${esc(g)}" aria-pressed="${(g==="All"&&!sel)||g===sel}">${esc(g)} · ${n}</button>`).join("")}
+$("chips").onclick=e=>{const b=e.target.closest(".chip");if(!b)return;sel=b.dataset.g==="All"?null:b.dataset.g;shown=40;chips();render();Paywall.track("filter",{g:sel||"All"})};
+$("sort").innerHTML=CFG.sorts.map(([k,l,paid])=>`<option value="${k}">${esc(l)}${paid&&!FULL?" (full list)":""}</option>`).join("");
+// map: every row is a dot (FREE.dots carries all of them, rounded), the sample is drawn on top
+const D=FREE.dots;const la=D.map(d=>d[0]),lo=D.map(d=>d[1]);
+// bounds from the 2nd-98th percentile, padded, so one far-out row cannot shrink everything else
+const pc=(a,p)=>{const s=a.slice().sort((x,y)=>x-y);return s[Math.min(s.length-1,Math.max(0,Math.round(p*(s.length-1))))]};
+const n0=pc(la,.98),s0=pc(la,.02),e0=pc(lo,.98),w0=pc(lo,.02),py=(n0-s0)*.08+.004,pxx=(e0-w0)*.08+.004;
+const B={n:n0+py,s:s0-py,w:w0-pxx,e:e0+pxx};
+const kx=Math.cos((B.n+B.s)/2*Math.PI/180),W=300,H=Math.round(W*(B.n-B.s)/((B.e-B.w)*kx));
+$("map").setAttribute("viewBox",`0 0 ${W} ${H}`);
+const px=(lat,lon)=>[(lon-B.w)/(B.e-B.w)*W,(B.n-lat)/(B.n-B.s)*H];
+function map(rows){
+  let s=`<rect width="${W}" height="${H}" fill="var(--panel)"/>`;
+  if(CFG.river)s+=`<polyline points="${CFG.river.map(p=>px(p[0],p[1]).map(v=>v.toFixed(1)).join(",")).join(" ")}" fill="none" stroke="var(--water)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>`;
+  const on=new Set(rows);
+  if(FULL){s+=ROWS.map(r=>{const [x,y]=px(r.lat,r.lon),o=on.has(r);return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${o?2.6:1.6}" fill="${o?CFG.color(r):"var(--ghost)"}" opacity="${o?.9:.5}"/>`}).join("")}
+  else{s+=D.map(d=>{const [x,y]=px(d[0],d[1]),o=!sel||CFG.chipOrder[d[2]]===sel;return `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${o?2.4:1.5}" fill="${o?CFG.dotColor[d[2]]:"var(--ghost)"}" opacity="${o?.85:.5}"/>`}).join("")}
+  for(const l of (CFG.labels||[])){const [x,y]=px(l[0],l[1]);s+=`<text x="${x.toFixed(1)}" y="${y.toFixed(1)}" font-size="10" fill="var(--muted)" font-family="var(--body)" text-anchor="middle">${esc(l[2])}</text>`}
+  $("map").innerHTML=s;
+}
+function filtered(){const r=ROWS.filter(x=>!sel||x[CFG.chipKey]===sel);const k=$("sort").value;return (CFG.sortFn[k]||CFG.sortFn[CFG.sorts[0][0]])(r.slice())}
+function row(r){return `<li class="r"><span class="a">${esc(CFG.title(r))}</span>${CFG.tag(r)}<span class="w">${esc(CFG.what(r)||"")}</span>${FULL&&CFG.paid?`<span class="k">${CFG.paid(r)}</span>`:""}<span class="m">${CFG.meta(r).filter(Boolean).map(esc).map(x=>`<span>${x}</span>`).join("")}</span></li>`}
+function render(){
+  const rows=filtered();map(rows);
+  const tot=FULL?rows.length:(sel?FREE.counts[sel]||0:FREE.total);
+  $("count").textContent=FULL?`Showing ${Math.min(shown,rows.length)} of ${rows.length}`:`${rows.length} of ${tot} open to look at, no login`;
+  $("list").innerHTML=rows.slice(0,FULL?shown:99).map(row).join("");
+  $("more").hidden=!FULL||shown>=rows.length;
+  $("lock").innerHTML=FULL?"":Paywall.lockRow(CFG.lockText(tot-rows.length));
+}
+$("more").onclick=()=>{shown+=60;render()};
+let lastSort=$("sort").value;
+$("sort").onchange=()=>{const s=CFG.sorts.find(x=>x[0]===$("sort").value);if(s&&s[2]&&!FULL){$("sort").value=lastSort;Paywall.track("lock_click",{what:"sort"});Paywall.go();return}lastSort=$("sort").value;shown=40;render();Paywall.track("sort",{k:lastSort})};
+$("csv").onclick=()=>{
+  if(!FULL){Paywall.track("lock_click",{what:"csv"});Paywall.go();return}
+  const rows=filtered(),q=v=>{v=String(v??"");return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};
+  const t=[CFG.cols.map(c=>q(c[1])).join(","),...rows.map(r=>CFG.cols.map(c=>q(r[c[0]])).join(","))].join("\n");
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([t],{type:"text/csv"}));a.download=CFG.csv;document.body.appendChild(a);a.click();a.remove();
+  Paywall.track("download",{rows:rows.length});
+};
+chips();render();
+Paywall.track("preview_open",{path:location.pathname});
+Paywall.init({slot:$("pay"),ctx:{path:location.pathname},onUnlock:(d)=>{ROWS=d.rows;FULL=true;
+  $("sort").innerHTML=CFG.sorts.map(([k,l])=>`<option value="${k}">${esc(l)}</option>`).join("");
+  const p=CFG.sorts.find(s=>s[2]);if(p){$("sort").value=p[0];lastSort=p[0]}
+  shown=40;chips();render()}}).then(()=>{if(!FULL)render()});
+</script>
+</body></html>
