@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parent.parent
 PRIV = ROOT / "private"; CACHE = PRIV / "cache"
 XL = sorted(CACHE.glob("ocm_licensed_*.xlsx"))[-1]
 METRO = {"Hennepin", "Ramsey", "Dakota", "Anoka", "Washington", "Scott", "Carver"}
-TODAY = dt.date.today(); NEW = (TODAY - dt.timedelta(days=90)).isoformat()
+TODAY = dt.date.today()
 wb = openpyxl.load_workbook(XL, read_only=True)
 raw = list(wb.worksheets[0].iter_rows(values_only=True)); H = raw[0]
 lic = [dict(zip(H, r)) for r in raw[1:] if r[0]]
@@ -40,6 +40,11 @@ def key(a):
     a = re.sub(r",.*$", "", (a or "").upper()).replace(".", "")
     t = [x for x in a.split() if x not in DIRS]
     return " ".join(t[:2])
+def addr_case(a):
+    """'3707 NEWTON AVE N #2' -> '3707 Newton Ave N'. The directional is its own word: a plain replace of
+    ' Ne' turned Newton into NEwton in the sibling mpls-new-rentals (2026-10-18)."""
+    a = re.sub(r"(\d)(St|Nd|Rd|Th)\b", lambda m: m.group(1) + m.group(2).lower(), re.sub(r"\s*#.*$", "", a or "").title())
+    return re.sub(r"\b(Ne|Se|Nw|Sw)\b", lambda m: m.group(1).upper(), a)
 rows = []
 for r in lic:
     addr = NA(r["Retail Site Address"])
@@ -52,7 +57,9 @@ for r in lic:
                      equity=NA(r["Social Equity Classified"]) == "Yes", medical=NA(r["Medical Cannabis Retail"]) == "Yes",
                      permit="", pstage="", pdate="", pwhat="", by=""))
 # Minneapolis build-out permits
-P = json.load(open(PRIV / "permits_raw.json"))["rows"]
+PR = json.load(open(PRIV / "permits_raw.json")); P = PR["rows"]
+# "newly licensed in the last 90 days" counts back from the page's own "updated" date (the permit pull), not the build day
+NEW = (dt.date.fromisoformat(PR["pulled"]) - dt.timedelta(days=90)).isoformat()
 CAN = re.compile(r"cannab|cannib|dispensar|dispenser", re.I)
 D = lambda ms: dt.datetime.utcfromtimestamp(ms / 1000).date().isoformat() if ms else ""
 def what(c):
@@ -79,7 +86,7 @@ for r in rows:
 for k, p in perm.items():
     if k in used: continue
     rows.append(dict(name="", legal="", kind="Grow or manufacturing" if re.search(r"cultivat|manufactur|processing|warehouse|grow|laborator|testing", p["what"], re.I) else "Dispensary",
-                     btype="", ltype="", addr=re.sub(r"(\d)(St|Nd|Rd|Th)\b", lambda m: m.group(1) + m.group(2).lower(), re.sub(r"\s*#.*$", "", p["addr"]).title()).replace(" Ne", " NE").replace(" Se", " SE"), city="Minneapolis", county="Hennepin", issued="", expires="", contact="", email="", license="",
+                     btype="", ltype="", addr=addr_case(p["addr"]), city="Minneapolis", county="Hennepin", issued="", expires="", contact="", email="", license="",
                      equity=False, medical=False, permit=p["permit"], pstage=p["stage"], pdate=p["done"] or p["date"], pwhat=p["what"], by=p["by"], lat=p["lat"], lon=p["lon"]))
 # geocode the rest (Census batch, free, cached)
 GC = CACHE / "geocode.json"; G = json.load(open(GC)) if GC.exists() else {}
@@ -118,6 +125,6 @@ for r in rows:
     else:
         r["stage"] = "Built out, not on the state list"
     r["latest"] = max(r["issued"], r["pdate"])
-json.dump({"pulled": TODAY.isoformat(), "ocm_file": XL.name, "rows": rows}, open(PRIV / "rows.json", "w"))
+json.dump({"pulled": PR["pulled"], "ocm_file": XL.name, "rows": rows}, open(PRIV / "rows.json", "w"))
 print("rows", len(rows), collections.Counter(r["stage"] for r in rows), collections.Counter(r["kind"] for r in rows))
 print("no location", sum(not r.get("lat") for r in rows), "approx", sum(bool(r.get("approx")) for r in rows), "with email", sum(bool(r["email"]) for r in rows), "permits", len(perm), "joined", len(used))
